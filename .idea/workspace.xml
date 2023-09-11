@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="mock connection and response">
+    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="expect on mocks">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/actors/MainActor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/MainApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/MainApp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,25 +59,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "ScalaTest",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.ScalaTest": "org.scalatest.wordspec.AnyWordSpecLike",
-    "last_opened_file_path": "/home/maksimsmuizininks/devel/presentations/AkkaTestPresentation/src/test/scala/actors",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;ScalaTest&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.ScalaTest&quot;: &quot;org.scalatest.wordspec.AnyWordSpecLike&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/maksimsmuizininks/devel/presentations/AkkaTestPresentation/src/test/scala/actors&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Scala"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Scala&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/scala/actors" />
@@ -82,13 +86,14 @@
       <recent name="org.scalatest.wordspec.AnyWordSpecLike" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="actors" />
       <recent name="factories" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="actors" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="MainApp" />
       <module name="AkkaTestPresentation" />
@@ -124,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiConsumerActorTest.mock must stub imported object" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ApiConsumerActorTest.api consumer should no mocks throw if bad url given" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
@@ -133,20 +138,21 @@
       </option>
       <option name="testKind" value="Test name" />
       <option name="testClassPath" value="actors.ApiConsumerActorTest" />
-      <option name="testName" value="mock must stub imported object" />
+      <option name="testName" value="api consumer should no mocks throw if bad url given" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockAnObjectTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ApiConsumerActorTest.api consumer should throw if bad url given" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="testKind" value="Class" />
-      <option name="testClassPath" value="actors.MockAnObjectTest" />
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="actors.ApiConsumerActorTest" />
+      <option name="testName" value="api consumer should throw if bad url given" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,8 +168,8 @@
       <option name="classBuf">
         <list>
           <option value="SampleScalatestTest" />
-          <option value="actors.MockAnObjectTest" />
           <option value="actors.ApiConsumerActorTest" />
+          <option value="actors.MockAnObjectTest" />
         </list>
       </option>
       <option name="shortenClasspath" value="NONE" />
@@ -175,17 +181,17 @@
       <item itemvalue="Application.MainApp" />
       <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
-      <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
-      <item itemvalue="ScalaTest.MockAnObjectTest" />
+      <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should no mocks throw if bad url given" />
+      <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should throw if bad url given" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should no mocks throw if bad url given" />
+        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should throw if bad url given" />
+        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest" />
-        <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
-        <item itemvalue="ScalaTest.MockAnObjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694444484877</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="expect on mocks">
+      <option name="closed" value="true" />
+      <created>1694444726409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694444726409</updated>
+    </task>
+    <task id="LOCAL-00009" summary="expect on mocks">
+      <option name="closed" value="true" />
+      <created>1694444905761</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694444905761</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +298,7 @@
     <MESSAGE value="add config and log actor starting point" />
     <MESSAGE value="add factories" />
     <MESSAGE value="mock connection and response" />
-    <option name="LAST_COMMIT_MESSAGE" value="mock connection and response" />
+    <MESSAGE value="expect on mocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="expect on mocks" />
   </component>
 </project>

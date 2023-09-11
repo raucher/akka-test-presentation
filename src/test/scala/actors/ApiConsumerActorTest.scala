@@ -1,6 +1,6 @@
 package actors
 
-import actors.ApiConsumerActor.{BAD_RESPONSE, FetchUrl, FetchedResponse, USER_AGENT}
+import actors.ApiConsumerActor.{FetchUrl, FetchedResponse, USER_AGENT}
 import akka.actor.ActorSystem
 import akka.testkit.{ImplicitSender, TestActorRef, TestKit}
 import factories.{ConnectionFactory, IoFactory}
@@ -9,9 +9,8 @@ import org.mockito.MockitoSugar
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.wordspec.AnyWordSpecLike
 
-import java.net.HttpURLConnection
+import java.net.{HttpURLConnection, MalformedURLException}
 import scala.io.Source
-
 
 class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
   with AnyWordSpecLike
@@ -37,6 +36,7 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
             "is_day":1,
             "time":"2023-09-11T11:00"
           }""".stripMargin
+
       val sourceMock = mock[Source]
       when(sourceMock.getLines()).thenReturn(Iterator(responseString))
 
@@ -52,10 +52,17 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
           verify(connMock).setRequestMethod("GET")
           verify(connMock).setRequestProperty("User-Agent", USER_AGENT)
 
-
           val responseMessage = expectMsgType[FetchedResponse]
           assert(responseMessage.data == responseString)
         }
+      }
+    }
+
+    "throw if bad url given" in {
+      // No Mocks!
+      val apiConsumer = TestActorRef[ApiConsumerActor]
+      intercept[MalformedURLException] {
+        apiConsumer.underlyingActor.receive(FetchUrl("BaD StRinG"))
       }
     }
   }
