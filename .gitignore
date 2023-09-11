@@ -11,7 +11,7 @@
 
 # AWS User-specific
 .idea/**/aws.xml
-
+sbt.json
 target
 project/target
 
