@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" filepath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AkkaTestPresentation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation-build.iml" />
     </modules>
   </component>
 </project>

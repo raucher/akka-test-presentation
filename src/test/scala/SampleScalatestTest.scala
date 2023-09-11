@@ -1,3 +1,9 @@
-class SampleScalatestTest {
+import org.scalatest.wordspec.AnyWordSpecLike
 
+class SampleScalatestTest extends AnyWordSpecLike {
+  "assertion" should {
+    "assert true" in {
+      assert(true)
+    }
+  }
 }
