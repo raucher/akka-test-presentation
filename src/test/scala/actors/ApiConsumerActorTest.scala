@@ -1,8 +1,8 @@
 package actors
 
-import actors.ApiConsumerActor.{BAD_RESPONSE, FetchUrl, FetchedResponse}
+import actors.ApiConsumerActor.{BAD_RESPONSE, FetchUrl, FetchedResponse, USER_AGENT}
 import akka.actor.ActorSystem
-import akka.testkit.{ImplicitSender, TestActor, TestActorRef, TestKit}
+import akka.testkit.{ImplicitSender, TestActorRef, TestKit}
 import factories.{ConnectionFactory, IoFactory}
 import org.mockito.ArgumentMatchers.any
 import org.mockito.MockitoSugar
@@ -47,6 +47,12 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
 
           val apiConsumer = TestActorRef[ApiConsumerActor]
           apiConsumer ! FetchUrl(ApiConsumerActor.API_ENDPOINT)
+
+          // Expectations on mock!
+          verify(connMock).setRequestMethod("GET")
+          verify(connMock).setRequestProperty("User-Agent", USER_AGENT)
+
+
           val responseMessage = expectMsgType[FetchedResponse]
           assert(responseMessage.data != BAD_RESPONSE)
         }
