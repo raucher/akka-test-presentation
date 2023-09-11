@@ -54,7 +54,7 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
 
 
           val responseMessage = expectMsgType[FetchedResponse]
-          assert(responseMessage.data != BAD_RESPONSE)
+          assert(responseMessage.data == responseString)
         }
       }
     }
