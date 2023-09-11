@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="add object mocking functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/MainApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/actors/DataPersistenceActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" afterDir="false" />
+    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="add config and log actor starting point">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/factories/ConnectionFactory.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/factories/IoFactory.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,17 +31,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="1-add-actors" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "raucher"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;raucher&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -72,6 +71,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Scala"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -81,11 +85,14 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="org.scalatest.wordspec.AnyWordSpecLike" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="factories" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="actors" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager" selected="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="MainApp" />
       <module name="AkkaTestPresentation" />
@@ -107,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiConsumerActorTest.mock must stub an object method" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ApiConsumerActorTest.api consumer should call factories and return a result" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
@@ -115,10 +122,8 @@
         <list />
       </option>
       <option name="testKind" value="Test name" />
-      <option name="shortenClasspath" value="NONE" />
       <option name="testClassPath" value="actors.ApiConsumerActorTest" />
-      <option name="testName" value="mock must stub an object method" />
-      <option name="useSbt" value="true" />
+      <option name="testName" value="api consumer should call factories and return a result" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,18 +178,18 @@
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
+      <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
       <item itemvalue="ScalaTest.MockAnObjectTest" />
-      <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub an object method" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
         <item itemvalue="ScalaTest.MockAnObjectTest" />
-        <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub an object method" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694440355422</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add config and log actor starting point">
+      <option name="closed" value="true" />
+      <created>1694441160379</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694441160379</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +261,7 @@
     <MESSAGE value="add target, project/target to .gitignore" />
     <MESSAGE value="add sbt.json to .gitignore" />
     <MESSAGE value="add object mocking functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add object mocking functionality" />
+    <MESSAGE value="add config and log actor starting point" />
+    <option name="LAST_COMMIT_MESSAGE" value="add config and log actor starting point" />
   </component>
 </project>
