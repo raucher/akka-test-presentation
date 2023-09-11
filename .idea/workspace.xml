@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="add sbt.json to .gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/actors/MockAnObjectTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="add object mocking functionality">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/MainApp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/actors/DataPersistenceActor.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,14 @@
       <recent name="actors" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.ScalaTests in 'scala'">
+  <component name="RunManager" selected="Application.MainApp">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="MainApp" />
+      <module name="AkkaTestPresentation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiConsumerActorTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
@@ -145,20 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleScalatestTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="AkkaTestPresentation" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="testKind" value="Class" />
-      <option name="shortenClasspath" value="NONE" />
-      <option name="testClassPath" value="SampleScalatestTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ScalaTests in 'scala'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
@@ -170,6 +161,7 @@
       <option name="classBuf">
         <list>
           <option value="SampleScalatestTest" />
+          <option value="actors.MockAnObjectTest" />
           <option value="actors.ApiConsumerActorTest" />
         </list>
       </option>
@@ -179,20 +171,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.MainApp" />
       <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
       <item itemvalue="ScalaTest.MockAnObjectTest" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub an object method" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest" />
-      <item itemvalue="ScalaTest.SampleScalatestTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub imported object" />
         <item itemvalue="ScalaTest.MockAnObjectTest" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest.mock must stub an object method" />
-        <item itemvalue="ScalaTest.SampleScalatestTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694435206446</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add object mocking functionality">
+      <option name="closed" value="true" />
+      <created>1694440355422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694440355422</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +247,7 @@
     <MESSAGE value="add dependencies" />
     <MESSAGE value="add target, project/target to .gitignore" />
     <MESSAGE value="add sbt.json to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sbt.json to .gitignore" />
+    <MESSAGE value="add object mocking functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="add object mocking functionality" />
   </component>
 </project>
