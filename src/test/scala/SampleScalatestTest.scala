@@ -1,3 +1,4 @@
+import org.scalatest.funspec.AnyFunSpecLike
 import org.scalatest.wordspec.AnyWordSpecLike
 
 class SampleScalatestTest extends AnyWordSpecLike {

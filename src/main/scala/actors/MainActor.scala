@@ -16,7 +16,9 @@ class MainActor extends Actor with ActorLogging {
   override def receive: Receive = {
     case Start =>
       val apiConsumer = context.actorOf(Props[ApiConsumerActor])
+      // timeout is used in Future completion
       implicit val timeout: Timeout = Timeout(5 second)
+
       val consumerFuture: Future[FetchedResponse] =
         (apiConsumer ? FetchUrl(API_ENDPOINT)).asInstanceOf[Future[FetchedResponse]]
 
