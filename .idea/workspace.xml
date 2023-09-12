@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="cleanup">
+    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="structure code">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/actors/MainActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/MainActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/SampleScalatestTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/SampleScalatestTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,9 @@
         <option name="url" value="git@github.com:raucher/akka-test-presentation.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -327,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694501462368</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="structure code">
+      <option name="closed" value="true" />
+      <created>1694508566179</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694508566179</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +362,7 @@
     <MESSAGE value="increase timeout" />
     <MESSAGE value="add companion object test" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="structure code" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure code" />
   </component>
 </project>
