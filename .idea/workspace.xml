@@ -168,8 +168,8 @@
       <option name="classBuf">
         <list>
           <option value="SampleScalatestTest" />
-          <option value="actors.ApiConsumerActorTest" />
           <option value="actors.MockAnObjectTest" />
+          <option value="actors.ApiConsumerActorTest" />
         </list>
       </option>
       <option name="shortenClasspath" value="NONE" />
