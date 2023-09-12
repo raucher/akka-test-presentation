@@ -1,5 +1,4 @@
 ## Akka Scala Example Test Project
-_Any additions, comments and critic are welcome :)_
 
 ```      
       d888888b                         d888888b
@@ -25,6 +24,7 @@ The journey of a thousand miles begins with the first step...
 - !! [Mocking Scala Object](https://github.com/mockito/mockito-scala#mocking-scala-object) !!
 - [Rock The JVM: Scala Testing With ScalaTest: Testing Styles for Beginners](https://www.youtube.com/watch?v=VqnEjorXq0k)
 
+_Any additions, comments and critic are welcome :)_
 
 ### TDD (opinionated approach)
 TDD is an iterative development process that emphasizes creating automated tests before writing code. 
