@@ -9,7 +9,8 @@ lazy val root = (project in file("."))
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.8.4",
+  "com.lihaoyi" %% "upickle" % "3.1.2",
   "com.typesafe.akka" %% "akka-testkit" % "2.8.4" % Test,
   "org.scalatest" %% "scalatest" % "3.2.17" % Test,
-  "org.mockito" %% "mockito-scala" % "1.17.12" % Test
+  "org.mockito" %% "mockito-scala" % "1.17.12" % Test,
 )

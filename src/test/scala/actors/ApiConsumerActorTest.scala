@@ -1,6 +1,6 @@
 package actors
 
-import actors.ApiConsumerActor.{FetchUrl, FetchedResponse, USER_AGENT}
+import actors.ApiConsumerActor.{FetchUrl, FetchedResponse, USER_AGENT, parseJson}
 import akka.actor.ActorSystem
 import akka.testkit.{ImplicitSender, TestActorRef, TestKit}
 import factories.{ConnectionFactory, IoFactory}
@@ -67,4 +67,17 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
     }
   }
 
+  "companion object" should {
+    "parse json to map" in {
+      val json =
+        """{
+            "latitude":51.04,
+            "longitude":13.74
+          }""".stripMargin
+
+      val parsedJson: Map[String, Float] = parseJson(json)
+
+      assert(parsedJson == Map("latitude" -> 51.04f, "longitude" -> 13.74f))
+     }
+  }
 }

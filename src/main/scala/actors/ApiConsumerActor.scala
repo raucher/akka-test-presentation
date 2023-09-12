@@ -41,4 +41,8 @@ object ApiConsumerActor {
       case _ => None
     }
   }
+
+  def parseJson(jsonString: String): Map[String, Float] = {
+    upickle.default.read[Map[String, Float]](jsonString)
+  }
 }
