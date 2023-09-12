@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="increase timeout">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AkkaTestPresentation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actors/ApiConsumerActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/actors/ApiConsumerActorTest.scala" afterDir="false" />
-    </list>
+    <list default="true" id="c2e2ee04-cf78-4aba-a9c0-e0dea8565054" name="Changes" comment="add companion object test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +87,7 @@
       <recent name="actors" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.ScalaTests in 'scala'">
+  <component name="RunManager" selected="ScalaTest.ScalaTests in 'actors'">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="MainApp" />
       <module name="AkkaTestPresentation" />
@@ -101,16 +95,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiConsumerActorTest.api consumer should call factories and return a result" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ApiConsumerActorTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="testKind" value="Test name" />
+      <option name="testKind" value="Class" />
       <option name="testClassPath" value="actors.ApiConsumerActorTest" />
-      <option name="testName" value="api consumer should call factories and return a result" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,20 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiConsumerActorTest.api consumer should throw if bad url given" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="AkkaTestPresentation" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="actors.ApiConsumerActorTest" />
-      <option name="testName" value="api consumer should throw if bad url given" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiConsumerActorTest.companion object should parse json to map" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="AkkaTestPresentation" />
       <option name="allowRunningInParallel" value="false" />
@@ -153,6 +132,19 @@
       <option name="testKind" value="Test name" />
       <option name="testClassPath" value="actors.ApiConsumerActorTest" />
       <option name="testName" value="companion object should parse json to map" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScalaTests in 'actors'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="AkkaTestPresentation" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="All in package" />
+      <option name="testPackagePath" value="actors" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,17 +173,17 @@
       <item itemvalue="Application.MainApp" />
       <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.companion object should parse json to map" />
-      <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
+      <item itemvalue="ScalaTest.ScalaTests in 'actors'" />
       <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should no mocks throw if bad url given" />
-      <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should throw if bad url given" />
+      <item itemvalue="ScalaTest.ApiConsumerActorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.ScalaTests in 'actors'" />
+        <item itemvalue="ScalaTest.ApiConsumerActorTest" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest.companion object should parse json to map" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should no mocks throw if bad url given" />
-        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should throw if bad url given" />
-        <item itemvalue="ScalaTest.ApiConsumerActorTest.api consumer should call factories and return a result" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694447027274</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add companion object test">
+      <option name="closed" value="true" />
+      <created>1694501172642</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694501172642</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add companion object test">
+      <option name="closed" value="true" />
+      <created>1694501185711</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694501185711</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,6 +325,7 @@
     <MESSAGE value="expect on mocks" />
     <MESSAGE value="add main actor" />
     <MESSAGE value="increase timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="increase timeout" />
+    <MESSAGE value="add companion object test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add companion object test" />
   </component>
 </project>

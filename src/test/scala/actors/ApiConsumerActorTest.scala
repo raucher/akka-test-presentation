@@ -78,6 +78,6 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
       val parsedJson: Map[String, Float] = parseJson(json)
 
       assert(parsedJson == Map("latitude" -> 51.04f, "longitude" -> 13.74f))
-     }
+    }
   }
 }
