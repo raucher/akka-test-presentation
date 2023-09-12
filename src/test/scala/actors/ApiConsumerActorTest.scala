@@ -2,7 +2,7 @@ package actors
 
 import actors.ApiConsumerActor.{FetchUrl, FetchedResponse, USER_AGENT, parseJson}
 import akka.actor.ActorSystem
-import akka.testkit.{ImplicitSender, TestActorRef, TestKit}
+import akka.testkit.{ImplicitSender, TestActorRef, TestKit, TestProbe}
 import factories.{ConnectionFactory, IoFactory}
 import org.mockito.ArgumentMatchers.any
 import org.mockito.MockitoSugar
@@ -58,11 +58,19 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
       }
     }
 
+    "test probe example" in {
+      val probe = TestProbe()
+
+      probe.ref ! "Our message"
+
+      probe.expectMsg("Our message")
+    }
+
     "throw if bad url given" in {
       // No Mocks!
       val apiConsumer = TestActorRef[ApiConsumerActor]
       intercept[MalformedURLException] {
-        apiConsumer.underlyingActor.receive(FetchUrl("BaD StRinG"))
+        apiConsumer.receive(FetchUrl("BaD StRinG"))
       }
     }
   }
@@ -78,6 +86,6 @@ class ApiConsumerActorTest extends TestKit(ActorSystem("ApiConsumerActorTest"))
       val parsedJson: Map[String, Float] = parseJson(json)
 
       assert(parsedJson == Map("latitude" -> 51.04f, "longitude" -> 13.74f))
-     }
+    }
   }
 }

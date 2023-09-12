@@ -18,6 +18,7 @@ class ApiConsumerActor extends Actor with ActorLogging {
       val conn = ConnectionFactory.connection(url)
       val response: String = getResponse(conn).getOrElse(BAD_RESPONSE)
       log.debug(response)
+
       context.sender() ! FetchedResponse(response)
   }
 }
